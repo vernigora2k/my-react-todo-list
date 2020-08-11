@@ -9,10 +9,17 @@ import { useState } from 'react'
 function App() {
 const [inputFormValue, setInputFormValue] = useState('temp')
 
+function handleChange(prop) {
+  console.log(prop)
+  setInputFormValue(prop)
+}
+
   return (
     <div className="App">
       <Title/>
-      <AddTodo inputFormValue={inputFormValue}
+      <AddTodo 
+        inputFormValue={inputFormValue}
+        changeInput={handleChange}
       />
       <TodoList/>
     </div>
