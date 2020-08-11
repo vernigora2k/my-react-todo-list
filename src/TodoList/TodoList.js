@@ -9,7 +9,9 @@ export default function TodoList({ inputFormValue }) {
             <h3 className='todos__title'>todos</h3>
             <ol className='todos__list'>
                 {/* <ItemTodo inputFormValue={inputFormValue}/> */}
-                
+                {[...inputFormValue].map((todo, i) => {
+                    console.log('temp')
+                })}
             </ol>
         </div>
     )
