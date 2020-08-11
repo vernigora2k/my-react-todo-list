@@ -1,7 +1,11 @@
 import React from 'react'
+import './AddTodo.css'
 
 export default function AddTodo() {
     return  (
-        <h1>Todo list</h1>
+        <form className='addForm'>
+            <input className='addForm__input' type='text'></input>
+            <button className='addForm__button' type='submit'>Add</button>
+        </form>
     )
 }
