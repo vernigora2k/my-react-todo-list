@@ -2,7 +2,7 @@ import React from 'react'
 import './AddTodo.css'
 import { useState } from 'react'
 
-export default function AddTodo({ inputFormValue, changeInput }) {
+export default function AddTodo({ changeInput }) {
     const [inputValue, setInputValue] = useState('')
 
     function handleChange(event) {

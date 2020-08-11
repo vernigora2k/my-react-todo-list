@@ -7,12 +7,14 @@ import { useState } from 'react'
 
 
 function App() {
-const [inputFormValue, setInputFormValue] = useState('temp')
+  const set = new Set()
+  const [inputFormValue, setInputFormValue] = useState(set)
 
-function handleChange(prop) {
-  console.log(prop)
-  setInputFormValue(prop)
-}
+  function handleChange(prop) {
+    console.log(prop)
+    setInputFormValue(inputFormValue.add(prop))
+    console.log(inputFormValue)
+  }
 
   return (
     <div className="App">
@@ -21,7 +23,9 @@ function handleChange(prop) {
         inputFormValue={inputFormValue}
         changeInput={handleChange}
       />
-      <TodoList/>
+      <TodoList 
+        inputFormValue={inputFormValue}
+      />
     </div>
   );
 }
