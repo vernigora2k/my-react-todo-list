@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 
 function App() {
-  const set = new Set()
+  const set = new Set(['take a cafe', 'make a dill'])
   const [inputFormValue, setInputFormValue] = useState(set)
 
   function handleChange(prop) {
