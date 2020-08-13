@@ -10,8 +10,6 @@ function App() {
   const [inputFormValue, setInputFormValue] = useState(['some todo', 'another todo'])
 
   function handleChange(prop) {
-    console.log(inputFormValue)
-    console.log(prop)
     setInputFormValue(inputFormValue.push(prop))
     console.log(inputFormValue)
     

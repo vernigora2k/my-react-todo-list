@@ -8,14 +8,12 @@ export default function AddTodo({ changeInput }) {
 
     function handleChange(event) {
         setInputValue(event.target.value)
-        console.log(inputValue)
     }
 
     function handleSubmit(event) {
         event.preventDefault()
         if (!inputValue) return null
         changeInput(inputValue.toLowerCase())
-        console.log(inputValue)
     }
 
     return  (
