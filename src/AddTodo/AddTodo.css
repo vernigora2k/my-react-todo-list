@@ -1,5 +1,6 @@
 .addForm__input {
-    width: 495px;
+    width: 485px;
+    margin-right: 10px;
 }
 .addForm__button {
     width: 50px;
