@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function ItemTodo({ inputFormValue }) {
-    console.log({ inputFormValue })
+export default function ItemTodo({ todo }) {
+    console.log({ todo })
     return (
-        <li>{inputFormValue}</li>
+        <li>{todo}</li>
     )
 }

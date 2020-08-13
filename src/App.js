@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Title from './Title/Title'
 import AddTodo from './AddTodo/AddTodo'
@@ -11,9 +11,7 @@ function App() {
   const [inputFormValue, setInputFormValue] = useState(set)
 
   function handleChange(prop) {
-    console.log(prop)
     setInputFormValue(inputFormValue.add(prop))
-    console.log(inputFormValue)
   }
 
   return (

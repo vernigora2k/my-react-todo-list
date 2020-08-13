@@ -6,13 +6,11 @@ export default function AddTodo({ changeInput }) {
     const [inputValue, setInputValue] = useState('')
 
     function handleChange(event) {
-        // console.log(event.target.value)
         setInputValue(event.target.value)
     }
 
     function handleSubmit(event) {
         event.preventDefault()
-        console.log(`hundleSubmit func ${inputValue}`)
         if (!inputValue) return null
         changeInput(inputValue.toLowerCase())
     }
