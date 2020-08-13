@@ -3,16 +3,19 @@ import './AddTodo.css'
 import { useState } from 'react'
 
 export default function AddTodo({ changeInput }) {
+    
     const [inputValue, setInputValue] = useState('')
 
     function handleChange(event) {
         setInputValue(event.target.value)
+        console.log(inputValue)
     }
 
     function handleSubmit(event) {
         event.preventDefault()
         if (!inputValue) return null
         changeInput(inputValue.toLowerCase())
+        console.log(inputValue)
     }
 
     return  (

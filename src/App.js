@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import Title from './Title/Title'
 import AddTodo from './AddTodo/AddTodo'
@@ -7,18 +7,20 @@ import { useState } from 'react'
 
 
 function App() {
-  const set = new Set(['take a cafe', 'make a dill'])
-  const [inputFormValue, setInputFormValue] = useState(set)
+  const [inputFormValue, setInputFormValue] = useState(['some todo', 'another todo'])
 
   function handleChange(prop) {
-    setInputFormValue(inputFormValue.add(prop))
+    console.log(inputFormValue)
+    console.log(prop)
+    setInputFormValue(inputFormValue.push(prop))
+    console.log(inputFormValue)
+    
   }
 
   return (
     <div className="App">
       <Title/>
       <AddTodo 
-        inputFormValue={inputFormValue}
         changeInput={handleChange}
       />
       <TodoList 
