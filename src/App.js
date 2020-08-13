@@ -17,6 +17,8 @@ function App() {
     
   }
 
+  console.log(inputFormValue)
+
   return (
     <div className="App">
       <Title/>
