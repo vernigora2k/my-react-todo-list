@@ -1,0 +1,11 @@
+li {
+    margin-top: 5px;
+}
+.todoItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todoItem__btnClose {
+    margin-right: 20px;
+}
