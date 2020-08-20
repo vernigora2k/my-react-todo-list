@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './TodoList.css'
 import ItemTodo from './ItemTodo.js'
 
 export default function TodoList({ inputFormValue }) {
-    const [inputValue, setInputValue] = useState(inputFormValue)
     
     return  (
         <div className='todos'>
@@ -12,7 +11,7 @@ export default function TodoList({ inputFormValue }) {
 
                 {!inputFormValue 
                     ? null
-                    : [...inputValue].map((todo, i) => {
+                    : [...inputFormValue].map((todo, i) => {
                         return <ItemTodo todo={todo} key={i}/>
                 })}
 

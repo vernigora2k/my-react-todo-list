@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Title from './Title/Title'
 import AddTodo from './AddTodo/AddTodo'
@@ -10,12 +10,10 @@ function App() {
   const [inputFormValue, setInputFormValue] = useState(['some todo', 'another todo'])
 
   function handleChange(prop) {
-    setInputFormValue(inputFormValue.push(prop))
-    console.log(inputFormValue)
-    
+    inputFormValue.push(prop)
+    setInputFormValue(inputFormValue) 
+    console.log(inputFormValue)  
   }
-
-  console.log(inputFormValue)
 
   return (
     <div className="App">
