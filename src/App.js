@@ -11,7 +11,7 @@ function App() {
 
   function handleChange(prop) {
     inputFormValue.push(prop)
-    setInputFormValue(inputFormValue) 
+    setInputFormValue([...inputFormValue]) 
     console.log(inputFormValue)  
   }
 
