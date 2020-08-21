@@ -7,12 +7,11 @@ import { useState } from 'react'
 
 
 function App() {
-  const [inputFormValue, setInputFormValue] = useState(['some todo', 'another todo'])
+  const [todos, setTodos] = useState(['some todo', 'another todo'])
 
   function handleChange(prop) {
-    inputFormValue.push(prop)
-    setInputFormValue([...inputFormValue]) 
-    console.log(inputFormValue)  
+    todos.push(prop)
+    setTodos([...todos]) 
   }
 
   return (
@@ -22,7 +21,7 @@ function App() {
         changeInput={handleChange}
       />
       <TodoList 
-        inputFormValue={inputFormValue}
+        todos={todos}
       />
     </div>
   );
