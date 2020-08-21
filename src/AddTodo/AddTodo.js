@@ -3,7 +3,6 @@ import './AddTodo.css'
 import { useState } from 'react'
 
 export default function AddTodo({ changeInput }) {
-    
     const [inputValue, setInputValue] = useState('')
 
     function handleChange(event) {
